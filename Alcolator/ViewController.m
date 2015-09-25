@@ -27,6 +27,7 @@
 }
 
 - (IBAction)textFieldDidChange:(UITextField *)sender {
+    
     NSString *enteredText = sender.text;
     float enteredNumber = [enteredText floatValue];
     if (enteredNumber == 0) {
@@ -35,8 +36,28 @@
     
 }
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
+    int integerSliderValue = (int)sender.value;
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    NSString *navigationText;
+    NSRange wineRange = [self.navigationItem.title rangeOfString:@"Wine"];
+    
+//    if ([self.navigationItem.title  isEqual: @"Wine"]) {
+    if (wineRange.location == NSNotFound) {
+        navigationText = NSLocalizedString(@"Whiskey", nil);
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%d shots)", navigationText, integerSliderValue];
+    }
+    else
+    {
+        navigationText = NSLocalizedString(@"Wine", nil);
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%d glasses)", navigationText, integerSliderValue];
+    }
+//    else
+//    {
+//        navigationText = NSLocalizedString(@"Whiskey", nil);
+//        self.navigationItem.title = [NSString stringWithFormat:@"%@ (%f shots)", navigationText, self.beerCountSlider.value];
+//    }
+
 }
 
 - (IBAction)buttonPressed:(id)sender {

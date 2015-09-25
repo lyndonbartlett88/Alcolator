@@ -42,7 +42,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohal Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWN-4v-ylA">
                                 <rect key="frame" x="20" y="64" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="hcl-Jo-hiO"/>
                                 </connections>
@@ -67,7 +67,7 @@
                             <outletCollection property="gestureRecognizers" destination="tBP-Le-J5o" appends="YES" id="dDu-f5-0xl"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Wine" id="8M4-W0-SMS"/>
+                    <navigationItem key="navigationItem" title="Wine" prompt="" id="8M4-W0-SMS"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="YO3-dY-NfL" id="oqt-2P-3BX"/>
                         <outlet property="beerPercentTextField" destination="qWN-4v-ylA" id="Nmf-V2-p6p"/>
