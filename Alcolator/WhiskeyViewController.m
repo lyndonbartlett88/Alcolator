@@ -31,6 +31,9 @@
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlocholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
+    int intNumberOfWhiskeyGlassesForEquivalentAlcoholAmount = numberOfWhiskeyGlassesForEquivalentAlcoholAmount;
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) intNumberOfWhiskeyGlassesForEquivalentAlcoholAmount]];
+    
     NSString *beerText;
     
     if (numberOfBeers == 1) {

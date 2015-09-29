@@ -78,6 +78,8 @@
     float alcoholPercentageOfWine = 0.13; //13% is average
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    int intNumberOfWineGlassesForEquivalentAlcoholAmount = numberOfWineGlassesForEquivalentAlcoholAmount;
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) intNumberOfWineGlassesForEquivalentAlcoholAmount]];
     //decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
     if (numberOfBeers == 1)
